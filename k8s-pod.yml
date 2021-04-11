@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: golang-simple-server
+  labels:
+    language: go
+    env: test
+spec:
+  containers:
+  - name: golang-simple-server
+    image: number1ice/golang-simple-server
+    ports:
+    - containerPort: 8080
+      protocol: TCP
